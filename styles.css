@@ -1,68 +1,126 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-a{
+    box-sizing: border-box;
     text-decoration: none;
-    color: #fff;
-}
-
-ul{
     list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
 }
 
-.header{
-    background-color: #58788f;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8rem;
+/* a{
+    color: #fff;
+    font-weight: bolder;
+} */
+
+.header-section-one{
+    /* display: flex; */
+    height: 80px;
+    width: 100%;
+    background-color: #0082e6;
+}
+
+.logo{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
 }
 
 .logo img{
-    width: 7rem;
+    width: 8rem;
     padding: 0 3rem 0 0;
     margin-top: 1rem;
 }
 
-.header-section-one{
-    display: flex;
+ul{
+    /* display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 6px;
+    line-height: 80px; */
+
+    float: right;
+    margin-right: 20px;
 }
 
-.header-section-two ul{
-    margin-top: 30px;
+ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
 }
+
+ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* .header{
+    background-color: #58788f;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8rem;
+} */
+
+
+
+
+
+/* .header-section-two ul{
+    margin-top: 30px;
+    
+} */
+
 
 .homepage{
     /* background-color: rgb(37, 150, 190); */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    padding-top: 6rem;
     color: #fff;
     background-color: #59788E;
 }
 
+
 .home h1{
     font-size: 5rem;
+    padding-bottom: 1.5rem;
     padding-bottom: 1rem;
 }
 
 .home P {
     font-size: 2rem;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
 }
-
-
 
 button{
     padding: 0.6rem 1.5rem;
     font-weight: 900;
     font-size: 0.8rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .show-now{
@@ -76,3 +134,166 @@ button{
     color: #fff;
     border: 2px solid white;
 }
+
+
+
+/* @media (max-width: 952px){
+    .logo{
+        font-size: 20px;
+        padding-left: 50px;
+    }
+
+    ul li a{
+        font-size: 16px;
+    }
+} */
+
+
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    #logo{
+        display: flex;
+        
+        /* align-items: flex-start; */
+        /* margin-top: -8px; */
+        /* margin-left: -20px; */
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
+    /* body{
+        background-color: #59788E;
+    } */
+
+    /* .header{
+        padding: 0 1rem;
+    } */
+
+    /* ul{
+        gap: 1rem;
+    } */
+
+    .homepage{
+        display: block;
+        padding: 1rem 0.5rem 1.2rem 1rem;
+    }
+    .home{
+        width: 100%;
+    }
+
+    .image img{
+        max-width: 80%;
+        height: auto;
+        align-items: center;
+    }
+
+    .home h1{
+        font-size: 2rem;
+    }
+    
+    .home P {
+        font-size: 1.3rem;
+        padding: 1.2rem 0;
+    }
+}
+
+
+
+
+
+
+/* @media only screen and (max-width: 520px) {
+    
+    body{
+        background-color: #59788E;
+    }
+
+    .header{
+        padding: 0 1rem;
+    }
+
+    ul{
+        gap: 1rem;
+    }
+
+    .homepage{
+        display: block;
+        padding: 1rem 0.5rem 1.2rem 1rem;
+    }
+    .home{
+        width: 100%;
+    }
+
+    .image img{
+        max-width: 80%;
+        height: auto;
+        align-items: center;
+    }
+
+    .home h1{
+        font-size: 2rem;
+    }
+    
+    .home P {
+        font-size: 1.3rem;
+        padding: 1.2rem 0;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    ul li{
+        display: block;
+    }
+
+    ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+    }
+  } */
