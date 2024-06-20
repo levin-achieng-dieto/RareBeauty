@@ -9,14 +9,13 @@
 .header-section-one{
     height: 80px;
     width: 100%;
-    /* background-color: #0082e6; */
     background-color: #3f6987;
 }
 
 .logo{
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 10px;
 }
 
 .logo img{
@@ -104,6 +103,13 @@ button{
     border: 2px solid white;
 }
 
+@media (max-width: 425px){
+    #logo{
+        float: left;
+    }
+    
+
+}
 
 
 @media (max-width: 858px){
@@ -120,7 +126,6 @@ button{
         position: fixed;
         width: 100%;
         height: 100vh;
-        /* background: #2c3e50; */
         background: #406681;
         top: 80px;
         left: -100%;
